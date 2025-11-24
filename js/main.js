@@ -1,15 +1,11 @@
-import './toggle-faq.js'
-import './check-select.js'
-import './open-modal.js'
-import './delete.js'
-import './card-scroll.js'
-
-const swiper = new Swiper('.subscription-swiper', {
-	loop: true,
-	slidesPerView: 1,
-	spaceBetween: 30,
-	navigation: {
-		nextEl: '.subscription-button-next',
-		prevEl: '.subscription-button-prev',
-	},
+document.addEventListener("DOMContentLoaded", () => {
+	const gallerySwiper = new Swiper('.gallary-swiper', {
+		slidesPerView: 3,
+		spaceBetween: 77,
+		loop: false,
+		navigation: {
+			nextEl: '.gallary-button-next',
+			prevEl: '.gallary-button-prev',
+		}
+	});
 });
