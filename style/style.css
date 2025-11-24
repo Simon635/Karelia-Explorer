@@ -75,6 +75,10 @@ body {
 	opacity: 1;
 }
 
+.header-container a:hover {
+	text-shadow: 1px 4px 18px rgba(255, 255, 255, 0.60);
+}
+
 .header-nav {
 	display: flex;
 	flex-wrap: wrap;
@@ -217,7 +221,7 @@ body {
 .gallary {
 	position: relative;
 	width: 100%;
-	padding: 60px 50px;
+	padding: 60px 40px;
 	box-sizing: border-box;
 	background: #000000;
 }
@@ -225,6 +229,7 @@ body {
 .gallary-container {
 	position: relative;
 	max-width: 1362px;
+	padding: 0 40px;
 	margin: 0 auto;
 }
 
@@ -245,6 +250,25 @@ body {
 	margin-bottom: 40px;
 	text-align: center;
 	color: #ffffff;
+}
+
+.swiper-button {
+	top: 275px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: transparent !important;
+}
+
+.arrow-left {
+    transform: rotate(180deg);
 }
 
 .gallary .gallary-swiper {
@@ -292,6 +316,15 @@ body {
 	padding: 0;
 }
 
+
+/* Неактивная стрелка */
+.gallary-button-next.swiper-button-disabled,
+.gallary-button-prev.swiper-button-disabled {
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+}
+
 .button {
 	display: block;
 	padding: 16px 36px;
@@ -307,9 +340,18 @@ body {
 	cursor: pointer;
 }
 
+.button:hover	{
+	box-shadow: 0 -10px 20px 0 rgba(82, 175, 227, 0.40), 0 10px 20px 0 rgba(27, 255, 27, 0.28), 0 1px 30px 0 #FFF;
+}
+
 .gallary-button {
 	max-width: 221px;
 	margin: 0 auto;
+}
+
+.wrapper {
+	position: relative;
+  z-index: 1;
 }
 
 .info {
@@ -321,7 +363,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	z-index: -1;
+	z-index: 1;
 }
 
 .info-container {
@@ -437,8 +479,11 @@ body {
 }
 
 .form-section {
+	position: relative;
 	margin-top: -300px;
+	margin-bottom: 315px;
 	padding: 0 40px;
+	z-index: 2;
 }
 
 .form-container {
@@ -452,7 +497,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	border-radius: 60px;
-	z-index: 10;
 }
 
 .form-text-container {
@@ -664,6 +708,11 @@ body {
 	background-repeat: no-repeat;
 }
 
+.footer-social-link:hover {
+	text-shadow: 1px 4px 18px rgba(255, 255, 255, 0.60);
+}
+
+
 .footer-social-link.telegram {
 	background-image: url('../img/icons/telegram.svg');
 	background-size: 37px 31px;
@@ -698,6 +747,11 @@ body {
 	color: #ffffff;
 	text-decoration: none;
 }
+
+.footer-info-container a:hover {
+	text-shadow: 1px 4px 18px rgba(255, 255, 255, 0.60);
+}
+
 
 .footer-contact-container {
 	max-width: 391px;
@@ -739,6 +793,7 @@ body {
 	pointer-events: none;
 	transition: 0.3s;
 	padding: 20px;
+	z-index: 10;
 }
 
 /* Активная */
