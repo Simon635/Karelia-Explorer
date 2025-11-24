@@ -1,3 +1,7 @@
+import "./info-toggle.js";
+import "./open-modal.js";
+import "./open-faq-modal.js"
+
 document.addEventListener("DOMContentLoaded", () => {
 	const gallerySwiper = new Swiper('.gallary-swiper', {
 		slidesPerView: 3,
