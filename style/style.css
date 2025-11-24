@@ -168,6 +168,22 @@ body {
 	background-size: 60px 55px;
 }
 
+.bg-img {
+	position: relative;
+}
+
+.bg-img::before {
+	content: "";
+	position: absolute;
+	top: -100px;
+	inset: 0;
+	background: url("../img/icons/bg-main-img.png") center/cover no-repeat;
+	transform: rotate(0deg);
+	background-size: 956px 5420px;
+	transform-origin: center;
+	z-index: 1;
+}
+
 .geolocation {
 	width: 100%;
 	background-color: #000000;
@@ -370,7 +386,7 @@ body {
 	max-width: 1362px;
 	padding: 0 40px;
 	margin: 0 auto;
-	z-index: -1;
+	z-index: 2;
 }
 
 .info-title {
